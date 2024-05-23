@@ -7,3 +7,8 @@
   padding: 0;
   font-family: "Source Code Pro", "Space Mono", "Montserrat", "sans-serif";
 }
+
+body {
+  background-color: black;
+  color: rgb(24, 255, 8);
+}
