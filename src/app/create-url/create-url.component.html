@@ -1,8 +1,8 @@
 <div>
   <h2>Create Short URL</h2>
-  <input placeholder="Enter long URL" />
-  <button>Shorten</button>
-  <div>
-    <p>Short URL: <a>Generated Url Shortened</a></p>
+  <input [(ngModel)]="longUrl" placeholder="Enter long URL" />
+  <button (click)="createShortUrl()">Shorten</button>
+  <div *ngIf="shortUrl">
+    <p>Shortened URL: {{ baseUrl + shortUrl }}</p>
   </div>
 </div>
