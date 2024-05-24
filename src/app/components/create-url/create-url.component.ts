@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { UrlResponse } from '../services/url-response';
-import { UrlService } from '../services/url.service';
+import { UrlResponse } from '../../model/url-response';
+import { UrlService } from '../../services/url.service';
 
 @Component({
   selector: 'app-create-url',
