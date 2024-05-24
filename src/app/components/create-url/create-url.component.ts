@@ -11,6 +11,7 @@ export class CreateUrlComponent {
   longUrl: string = '';
   shortUrl: string = '';
   baseUrl: string = 'http://localhost:8080/api/shorty/';
+  copyButtonText: string = 'Copy';
 
   constructor(private urlService: UrlService) {}
 
@@ -26,5 +27,22 @@ export class CreateUrlComponent {
         console.log('URL shortening complete');
       },
     });
+  }
+
+  copyToClipboard(url: string): void {
+    navigator.clipboard.writeText(url).then(
+      () => {
+        this.copyButtonText = 'Copied!';
+        setTimeout(() => {
+          this.copyButtonText = 'Copy';
+        }, 2000);
+      },
+      () => {
+        this.copyButtonText = 'Failed to copy';
+        setTimeout(() => {
+          this.copyButtonText = 'Copy';
+        }, 2000);
+      }
+    );
   }
 }

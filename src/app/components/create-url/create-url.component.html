@@ -27,11 +27,22 @@
     </button>
   </div>
 </form>
-<div *ngIf="shortUrl" class="sm:max-w-lg sm:flex md:mx-auto mt-4">
-  <p class="mt-3 text-sm text-gray-300">
-    Shortened URL:
-    <a href="{{ baseUrl + shortUrl }}" class="text-blue-300 hover:underline">
-      {{ baseUrl + shortUrl }}
-    </a>
-  </p>
+<div *ngIf="shortUrl" class="sm:max-w-2xl sm:flex md:mx-auto mt-4">
+  <div class="flex flex-col sm:flex-row items-center">
+    <p class="text-sm text-gray-300 mb-2 sm:mb-0 sm:mr-2">
+      Shortened URL:
+      <a
+        href="{{ baseUrl + shortUrl }}"
+        class="text-blue-300 hover:underline break-words"
+      >
+        {{ baseUrl + shortUrl }}
+      </a>
+    </p>
+    <button
+      (click)="copyToClipboard(baseUrl + shortUrl)"
+      class="ml-0 sm:ml-2 bg-gray-700 text-gray-300 font-bold py-1 px-4 rounded focus:outline-none"
+    >
+      {{ copyButtonText }}
+    </button>
+  </div>
 </div>
