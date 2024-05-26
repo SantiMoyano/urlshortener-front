@@ -10,7 +10,7 @@ import { UrlService } from '../../services/url.service';
 export class CreateUrlComponent {
   longUrl: string = '';
   shortUrl: string = '';
-  baseUrl: string = 'http://localhost:8080/api/shorty/';
+  baseUrl: string = 'https://urlshortener-lazjqqfx7a-uc.a.run.app/shorty/';
   copyButtonText: string = 'Copy';
 
   constructor(private urlService: UrlService) {}

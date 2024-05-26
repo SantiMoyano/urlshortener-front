@@ -27,8 +27,11 @@
     </button>
   </div>
 </form>
-<div *ngIf="shortUrl" class="sm:max-w-2xl sm:flex md:mx-auto mt-4">
-  <div class="flex flex-col sm:flex-row items-center">
+<div
+  *ngIf="shortUrl"
+  class="flex flex-col justify-center sm:max-w-2xl sm:flex md:mx-auto mt-4"
+>
+  <div class="flex sm:flex-row items-center">
     <p class="text-sm text-gray-300 mb-2 sm:mb-0 sm:mr-2">
       Shortened URL:
       <a
