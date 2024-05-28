@@ -10,7 +10,7 @@ import { UrlService } from '../../services/url.service';
 export class CreateUrlComponent {
   longUrl: string = '';
   shortUrl: string = '';
-  baseUrl: string = 'https://urlshortener-lazjqqfx7a-uc.a.run.app/shorty/';
+  baseUrl: string = 'https://urlshortener-bay.vercel.app/shorty/';
   copyButtonText: string = 'Copy';
 
   constructor(private urlService: UrlService) {}
