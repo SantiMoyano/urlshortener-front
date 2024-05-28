@@ -8,7 +8,7 @@ import { UrlResponse } from '../model/url-response';
 })
 export class UrlService {
   //private apiUrl = 'http://localhost:8080/shorty';
-  private apiUrl = 'https://urlshortener-lazjqqfx7a-uc.a.run.app/shorty/';
+  private apiUrl = 'https://urlshortener-lazjqqfx7a-uc.a.run.app/shorty';
 
   constructor(private http: HttpClient) {}
 
